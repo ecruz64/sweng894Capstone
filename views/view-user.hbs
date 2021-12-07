@@ -1,0 +1,44 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View Equipment</li>
+  </ol>
+</nav>
+
+<div class="view-user p-5">
+
+  {{#each rows}}
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h3>{{this.equip_name}} {{this.mfr}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">serial_num</th>
+            <th scope="col">vendor</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">{{this.serial_num}}</th>
+            <td>{{this.vendor}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div  class="row">
+        <div class="col"><b>Description</b></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {{this.descr}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
