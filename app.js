@@ -2,16 +2,14 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-const {response} = require("express");
+const {response, request} = require("express");
 const {createConnection} = require("mysql");
 
 require('dotenv').config();
-
 const app = express();
 const port  = process.env.PORT || 8080;
 
 // Parsing Middleware
-//Parse Application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //parse Application/JSON
