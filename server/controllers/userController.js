@@ -9,6 +9,7 @@ const pool = mysql.createPool({
   password        :process.env.DB_PASS,
   database        :process.env.DB_NAME
 });
+
 // View Users
 exports.view = (req, res) => {
   pool.getConnection((err, connection) => {
@@ -48,8 +49,6 @@ exports.find = (req, res) => {
     });
   });
 }
-
-
 exports.form = (req,res) => {
   res.render('add-user');
 }
@@ -76,6 +75,7 @@ exports.create = (req, res) => {
     });
   });
 }
+
 // Edit User
 exports.edit = (req,res) => {
   pool.getConnection((err, connection) => {
@@ -165,7 +165,6 @@ exports.delete = (req,res) => {
     });
   });
 }
-
 
 // View All Users
 exports.viewall = (req, res) => {
