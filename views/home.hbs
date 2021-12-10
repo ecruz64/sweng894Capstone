@@ -4,11 +4,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 {{/if}}
-
+<!--Lawn Equipment Table-->
 <div class="row">
   <div  class="col-6"><h1>Lawn Equipment</h1></div>
   <div  class="col-6 d-flex justify-content-end">
-    <a href="/adduser" type="button" class="btn btn-primary align-self-center">+ add equipment</a>
+    <a href="/addequip" type="button" class="btn btn-primary align-self-center">+ add equipment</a>
   </div>
 </div>
 <table class="table table-bordered">
@@ -31,12 +31,31 @@
     <td>{{this.serial_num}}</td>
     <td>{{this.vendor}}</td>
     <td class="text-end">
-      <a href="/viewuser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
-      <a href="/edituser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
+      <a href="/viewequip/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
+      <a href="/editequip/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i> Edit</a>
       <a href="/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
     </td>
   </tr>
   {{/each}}
   </tbody>
 </table>
-
+<!--User enters zip code-->
+<div class="container pt-5 pb-5"><h1>User Info</h1>
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <form [formGroup]="myZip">
+        <div class="row">
+          <label for="zip1">Zip Code: </label>
+        </div>
+        <div class="col-sm-2">
+          <input id="zip1" type="text" formControlName="zipFC">
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <button type="submit" >Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

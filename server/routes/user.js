@@ -4,12 +4,13 @@ const userController = require('../controllers/userController');
 
 // create, find update, delete
 router.get('/', userController.view);
+// weather router
+router.get('/weather',userController.weather);
 router.post('/', userController.find);
-router.get('/adduser', userController.form);
-router.post('/adduser', userController.create);
-router.get('/edituser/:id', userController.edit);
-router.post('/edituser/:id', userController.update);
-router.get('/viewuser/:id', userController.viewall);
+router.get('/addequip', userController.form);
+router.post('/addequip', userController.create);
+router.get('/editequip/:id', userController.edit);
+router.post('/editequip/:id', userController.update);
+router.get('/viewequip/:id', userController.viewall);
 router.get('/:id', userController.delete);
-
 module.exports = router;
