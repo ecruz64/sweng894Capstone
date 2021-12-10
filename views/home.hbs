@@ -40,22 +40,58 @@
   </tbody>
 </table>
 <!--User enters zip code-->
-<div class="container pt-5 pb-5"><h1>User Info</h1>
-  <div class="container-fluid">
-    <div class="col-md-12">
-      <form [formGroup]="myZip">
-        <div class="row">
-          <label for="zip1">Zip Code: </label>
-        </div>
-        <div class="col-sm-2">
-          <input id="zip1" type="text" formControlName="zipFC">
-        </div>
-        <div class="row">
-          <div class="col-sm-2">
-            <button type="submit" >Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter Your Zip Code Here" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <button class="btn btn-primary align-self-center" type="button" id="button-addon1">Zip Code</button>
+
 </div>
+<!--<div class="container pt-5 pb-5"><h1>User Info</h1>-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="col-md-12">-->
+<!--      <form [formGroup]="myZip">-->
+<!--        <div class="row">-->
+<!--          <label for="zip1">Zip Code: </label>-->
+<!--        </div>-->
+<!--        <div class="col-sm-2">-->
+<!--          <input id="zip1" type="text" formControlName="zipFC">-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--          <div class="col-sm-2">-->
+<!--            <button type="submit" >Submit</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--Weather Table-->
+<table class="table"><h1>Weather Table</h1>
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Temp</th>
+    <th scope="col">Rain Fall</th>
+    <th scope="col">Humidity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>35.5</td>
+    <td>.01</td>
+    <td>35</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>33</td>
+    <td>.20</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>40</td>
+    <td>3</td>
+    <td>50</td>
+  </tr>
+  </tbody>
+</table>
